@@ -1,0 +1,16 @@
+# backend requirements
+# Install with: pip install -r backend/requirements.txt --break-system-packages
+#
+# Note: this does NOT include ai_core's dependencies (langchain, chromadb,
+# sentence-transformers, etc). Install ai_core/requirements.txt too — the
+# backend imports ai_core lazily at call-time, so the API server itself
+# will start without them, but /agents and /documents endpoints will fail
+# until they're installed.
+
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+sqlalchemy>=2.0.0
+pydantic>=2.9.0
+pydantic-settings>=2.6.0
+python-multipart>=0.0.12
+python-dotenv>=1.0.0
