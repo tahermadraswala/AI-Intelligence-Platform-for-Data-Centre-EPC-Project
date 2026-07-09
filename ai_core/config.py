@@ -15,14 +15,16 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-# Load .env from project root if present (no-op if it doesn't exist).
-load_dotenv()
-
 BASE_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = BASE_DIR.parent
 DATA_DIR = BASE_DIR / "data"
 VECTOR_STORE_DIR = DATA_DIR / "vector_store"
-RAW_DOCS_DIR = BASE_DIR.parent / "data" / "raw_documents"
-MOCK_SCHEDULES_DIR = BASE_DIR.parent / "data" / "mock_schedules"
+RAW_DOCS_DIR = PROJECT_ROOT / "data" / "raw_documents"
+MOCK_SCHEDULES_DIR = PROJECT_ROOT / "data" / "mock_schedules"
+
+# Load the shared project-root .env regardless of whether the process is
+# launched from the repository root or from backend/.
+load_dotenv(PROJECT_ROOT / ".env")
 
 
 @dataclass

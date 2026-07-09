@@ -58,6 +58,12 @@ Then open **http://localhost:8000/docs** for interactive Swagger docs —
 every endpoint below is exercisable straight from the browser, no
 frontend required.
 
+To verify the backend can see the AI brain and its configuration, open:
+
+```bash
+GET http://localhost:8000/api/v1/ai-brain/status
+```
+
 ## Fastest demo path (no file uploads needed)
 
 1. Generate + ingest mock data once:
@@ -77,6 +83,7 @@ frontend required.
 
 | Method | Path | Purpose |
 |---|---|---|
+| `GET` | `/api/v1/ai-brain/status` | Check backend connectivity to `ai_core`, required AI dependencies, and API key configuration |
 | `POST` | `/api/v1/documents/upload` | Upload a PDF/TXT into a vector collection (`specs_and_standards`, `vendor_submittals`, `project_docs_rfi`) |
 | `GET` | `/api/v1/documents` | List ingested documents (optionally filter by `collection`) |
 | `GET` | `/api/v1/documents/{collection}/status` | Chunk count + source files currently indexed |

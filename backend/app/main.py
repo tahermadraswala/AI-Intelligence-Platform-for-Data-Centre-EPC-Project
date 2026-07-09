@@ -15,7 +15,7 @@ from __future__ import annotations
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import agents, documents, schedule
+from app.api.routes import agents, ai_brain, documents, schedule
 from app.core.config import settings
 from app.core.database import init_db
 
@@ -54,5 +54,6 @@ def health():
 
 
 app.include_router(documents.router, prefix=settings.api_v1_prefix)
+app.include_router(ai_brain.router, prefix=settings.api_v1_prefix)
 app.include_router(agents.router, prefix=settings.api_v1_prefix)
 app.include_router(schedule.router, prefix=settings.api_v1_prefix)

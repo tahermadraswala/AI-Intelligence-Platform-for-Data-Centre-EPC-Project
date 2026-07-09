@@ -32,6 +32,19 @@ class CollectionStatus(BaseModel):
     sources: list[str]
 
 
+# ---------- AI Brain ----------
+
+class AIBrainStatusResponse(BaseModel):
+    connected: bool
+    ai_core_importable: bool
+    api_key_configured: bool
+    llm_model: str
+    embedding_model: str
+    available_agents: list[str] = Field(default_factory=list)
+    missing_dependencies: list[str] = Field(default_factory=list)
+    message: str
+
+
 # ---------- Spec Compliance ----------
 
 class SpecComplianceRequest(BaseModel):
