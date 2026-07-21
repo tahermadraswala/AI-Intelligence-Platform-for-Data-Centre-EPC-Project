@@ -1,0 +1,21 @@
+VENDOR SUBMITTAL — UNINTERRUPTIBLE POWER SUPPLY (UPS) SYSTEM
+Submittal No: SUB-EL-0142
+Vendor: Flowers, Martin and Kelly
+Equipment: Modular UPS, 500kVA per module
+
+1. System Configuration
+   - Redundancy: N+1 (single UPS module redundancy per pod)
+   - Battery autonomy: 7 minutes at full rated load
+   - Paralleling architecture: Centralized static bypass
+
+2. Environmental Ratings
+   - Operating temperature range: 0°C to 40°C
+   - Enclosure protection rating: IP20
+
+3. Monitoring & Integration
+   - BMS protocol: Modbus TCP
+   - Remote monitoring: Web-based, no SNMP trap support included
+
+4. Testing & Certification
+   - Factory witness test: Not scheduled (vendor standard test report only)
+   - UL/CE certification: CE only, UL certification pending

@@ -1,0 +1,22 @@
+PROJECT ELECTRICAL SPECIFICATION — SECTION 26 33 53: UPS SYSTEMS
+(Reference: TIA-942 Tier III requirements, Client Design Basis Rev C)
+
+26 33 53 - 2.1 Redundancy
+   UPS system configuration shall be 2N or N+1 with minimum two independent
+   UPS modules per critical pod. Concurrent maintainability is mandatory per
+   Tier III requirements.
+
+26 33 53 - 2.2 Battery Autonomy
+   Minimum battery autonomy shall be 10 minutes at full rated critical load
+   to bridge generator start and transfer sequence.
+
+26 33 53 - 2.5 Monitoring & Integration
+   All UPS units shall support SNMP v3 trap notifications in addition to
+   Modbus TCP, integrated into the central BMS/EPMS for real-time alarm
+   escalation.
+
+26 33 53 - 2.7 Testing & Certification
+   All UPS units shall undergo a factory witness test attended by
+   Owner's Engineer prior to shipment. Units shall carry both UL and CE
+   certification at time of delivery; "certification pending" is not
+   an acceptable delivery condition.

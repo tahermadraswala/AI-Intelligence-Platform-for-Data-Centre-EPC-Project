@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Typography System */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Color Palette Tokens */
+  --color-primary-bg: #FAFAF7;
+  --color-card-bg: #FFFFFF;
+  
+  --color-olive-primary: #556B2F;
+  --color-olive-dark: #3E4F24;
+  --color-olive-light: #E8F0E3;
+  
+  --color-border-primary: #D9E1D3;
+  
+  --color-text-primary: #1F2937;
+  --color-text-secondary: #6B7280;
+  
+  /* Status Color Tokens */
+  --color-status-success: #16A34A;
+  --color-status-warning: #D97706;
+  --color-status-error: #DC2626;
+}
+
+/* Global resets and element-level default rules */
+@layer base {
+  html, body {
+    background-color: var(--color-primary-bg);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* JetBrains Mono applied by default to numeric and code values */
+  code, pre, .mono-data {
+    font-family: var(--font-mono);
+  }
+}
+
+/* ─── SiteIQ Animation Keyframes ─────────────────────────────
+   Referenced via inline style={{ animation: '...' }} in JSX.
+   CSS-only: no JS animation libraries required.
+────────────────────────────────────────────────────────────── */
+
+/* Staggered section reveal — used in Results workspace */
+@keyframes siqFadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Upload success confirmation — used in UploadZone */
+@keyframes siqCheckBounce {
+  0%   { opacity: 0; transform: scale(0.88); }
+  60%  { opacity: 1; transform: scale(1.03); }
+  100% { opacity: 1; transform: scale(1); }
+}

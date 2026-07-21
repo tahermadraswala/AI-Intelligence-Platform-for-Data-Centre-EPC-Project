@@ -1,0 +1,18 @@
+task_id,task_name,category,depends_on,duration_days,planned_start,planned_end,forecast_end,delay_days,status,responsible_party
+T01,Site mobilisation & earthworks,civil,,20,2026-01-05,2026-01-25,2026-01-25,0,NOT_STARTED,"Rodriguez, Figueroa and Sanchez"
+T02,Foundation & structural slab,civil,T01,35,2026-01-26,2026-03-02,2026-03-02,0,NOT_STARTED,Doyle Ltd
+T03,Building envelope / shell erection,civil,T02,45,2026-03-03,2026-04-17,2026-04-17,0,IN_PROGRESS,"Mcclain, Miller and Henderson"
+T04,Switchgear procurement (long-lead),procurement,,90,2026-01-05,2026-04-05,2026-04-23,18,AT_RISK,Davis and Sons
+T05,Generator procurement (long-lead),procurement,,100,2026-01-05,2026-04-15,2026-04-15,0,IN_PROGRESS,"Guzman, Hoffman and Baldwin"
+T06,UPS system procurement,procurement,,75,2026-01-05,2026-03-21,2026-03-30,9,AT_RISK,"Gardner, Robinson and Lawrence"
+T07,Electrical rough-in,electrical,T03,30,2026-04-18,2026-05-18,2026-05-18,0,IN_PROGRESS,Blake and Sons
+T08,Switchgear installation,electrical,T04,15,2026-04-06,2026-04-21,2026-04-21,0,IN_PROGRESS,"Henderson, Ramirez and Lewis"
+T09,Generator installation,electrical,T05,12,2026-04-16,2026-04-28,2026-04-28,0,NOT_STARTED,Garcia-James
+T10,UPS installation,electrical,T06,10,2026-03-22,2026-04-01,2026-04-01,0,NOT_STARTED,Abbott-Munoz
+T11,Cooling plant (CRAH/chiller) installation,mechanical,T03,25,2026-04-18,2026-05-13,2026-05-13,0,COMPLETE,Blair PLC
+T12,BMS/EPMS integration,controls,T08,20,2026-04-22,2026-05-12,2026-05-12,0,NOT_STARTED,Dudley Group
+T13,"IT white space fit-out (racks, PDUs)",fitout,T07,18,2026-05-19,2026-06-06,2026-06-06,0,NOT_STARTED,Arnold Ltd
+T14,Level 1 commissioning (component),commissioning,T12,15,2026-05-13,2026-05-28,2026-05-28,0,NOT_STARTED,"Mcclure, Ward and Lee"
+T15,Level 2 commissioning (integrated systems),commissioning,T14,20,2026-05-29,2026-06-18,2026-06-18,0,IN_PROGRESS,Williams and Sons
+T16,Level 3 commissioning (integrated systems test / IST),commissioning,T15,25,2026-06-19,2026-07-14,2026-07-14,0,IN_PROGRESS,Galloway-Wyatt
+T17,Tier certification walkthrough,commissioning,T16,10,2026-07-15,2026-07-25,2026-07-25,0,NOT_STARTED,James Group
