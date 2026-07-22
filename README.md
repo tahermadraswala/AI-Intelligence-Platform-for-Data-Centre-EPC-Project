@@ -150,39 +150,6 @@ The backend exposes a versioned API under `/api/v1` and includes:
 - supply chain risk analysis,
 - commissioning QA assessments.
 
-## API Endpoints
-
-### AI Brain
-- `GET /api/v1/ai-brain/status`
-
-### Documents
-- `POST /api/v1/documents/upload`
-- `GET /api/v1/documents`
-- `GET /api/v1/documents/{collection}/status`
-
-### Agents
-- `POST /api/v1/agents/spec-compliance`
-- `GET /api/v1/agents/spec-compliance/history`
-- `POST /api/v1/agents/rfi-copilot`
-- `GET /api/v1/agents/rfi-copilot/history`
-
-### Schedule Risk
-- `GET /api/v1/schedule/mock-tasks`
-- `POST /api/v1/schedule/risk-analysis/mock`
-- `POST /api/v1/schedule/risk-analysis/upload`
-- `GET /api/v1/schedule/risk-analysis/history`
-
-### Supply Chain
-- `GET /api/v1/supply-chain/mock-shipments`
-- `POST /api/v1/supply-chain/risk-analysis/mock`
-- `POST /api/v1/supply-chain/risk-analysis/upload`
-- `GET /api/v1/supply-chain/risk-analysis/history`
-
-### Commissioning
-- `GET /api/v1/commissioning/mock-records`
-- `POST /api/v1/commissioning/qa-assessment/mock`
-- `POST /api/v1/commissioning/qa-assessment/upload`
-- `GET /api/v1/commissioning/qa-assessment/history`
 
 ## How It Works
 
