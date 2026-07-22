@@ -252,7 +252,6 @@ http://localhost:5173
 
 - The backend is organized to keep API, services, schemas, and database models separate.
 - AI agents are loaded lazily to avoid blocking app startup.
-- The frontend is built to keep working with mock fallbacks when live services are unavailable.
 - Historical results are persisted so the UI can display previous runs.
 - The system is intentionally modular so more agents can be added later.
 
